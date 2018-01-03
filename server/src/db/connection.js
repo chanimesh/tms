@@ -7,9 +7,8 @@ export default class dbConnection{
 
 }
         writeData(data,collection){
-        // let data=data;
-        // let collection=collection;
-            MongoClient.connect(url, (err, db) => {
+            return new Promise((resolve,reject) => {
+                MongoClient.connect(url, (err, db) => {
                 if (err) throw err;
                 db.collection(collection).insertOne(data, (err, res) => {
                     if (err) throw err;
@@ -17,8 +16,9 @@ export default class dbConnection{
                     db.close();
                 });
             });
+        });
+    }
 
-        }
         readData(data,collection){
             return new Promise((resolve,reject) => {
             MongoClient.connect(url, (err, db) => {

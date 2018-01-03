@@ -11,6 +11,6 @@ export default class saveTransaction{
         console.log(this.transactionData);
         let collection="transactions";
         new dbConnection().writeData(this.transactionData,collection);
-        this.response.send("hello   njasdf");
+        this.response.send("sucess");
     }
 }
