@@ -1,5 +1,5 @@
 import home from "./home";
-import addTrasaction from "./addTrasaction";
+import addTrasaction from "./addTransaction";
 import insertTransaction from "./insertTrasaction";
 import listTransactions from "./listTransactions"
 import getTransactions from "./getTransactions"
