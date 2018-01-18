@@ -12,7 +12,6 @@ export default class getTransactions{
         let collection="transactions";
         let dbconn = new dbConnection();
         dbconn.readData(this.transactionData,collection).then((dataResult) => {
-               console.log(dataResult);
                this.response.json(dataResult);
         })
             .catch((error)=>{
